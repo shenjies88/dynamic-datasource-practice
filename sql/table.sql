@@ -1,32 +1,15 @@
-create table if not exists datasource1.user
+CREATE TABLE `user`
 (
-    id
-    int
-    auto_increment
-    primary
-    key,
-    name
-    varchar
+    `id`   int(11) NOT NULL AUTO_INCREMENT,
+    `name` varchar(20) DEFAULT NULL,
+    `age`  int(11) DEFAULT NULL,
+    PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='用户';
+
+CREATE TABLE `member`
 (
-    20
-) null,
-    age int null
-    ) comment '用户';
-
-create table if not exists datasource2.member
-(
-    id
-    int
-    auto_increment
-    primary
-    key,
-    name
-    varchar
-(
-    20
-) null,
-    age int null
-    );
-
-
-
+    `id`   int(11) NOT NULL AUTO_INCREMENT,
+    `name` varchar(20) DEFAULT NULL,
+    `age`  int(11) DEFAULT NULL,
+    PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='会员';
